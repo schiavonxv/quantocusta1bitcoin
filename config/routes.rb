@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  root 'static#home'
+  # get 'static/home'
+
+  # API para ser acessada pelo robô
+  # namespace :api, defaults: { format: :json }, path: '/api' do
+    # namespace :v1 do
+      get 'cotacao' => 'static#cotacao'
+    # end
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
