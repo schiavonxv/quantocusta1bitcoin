@@ -1,0 +1,130 @@
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    main {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    .section-1 {
+        background: image-url("background1-tablet.jpg") no-repeat scroll;
+        background-size: auto;
+    }
+
+    .section-3 {
+        z-index: 0;
+        max-height: 150vh;
+        min-height: 100vh;
+    }
+
+    .sobre-3 {
+        margin: 40px auto;
+        height: auto;
+        min-height: 100vh;
+        max-height: 150vh;
+        display: block;
+        position: relative;
+
+        .inner-content {
+            .left {
+                display: block;
+                width: 100%;
+            }
+
+            .right {
+                display: block;
+                width: 100%
+            }
+        }
+
+    }
+
+    .cotacao-1 {
+
+        width: 700px;
+        height: 350px;
+
+        #message {
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 300;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .buy {
+            padding: 30px;
+        }
+
+        .price-outer {
+            width: 600px;
+            height: 80px;
+
+            .input {
+                padding: 20px;
+            }
+        }
+    }
+
+    .break-contact {
+        display: none;
+    }
+
+    .single-contact {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .same-line {
+        text-align: left;
+        margin-right: 40px;
+        b {
+            text-align: left;
+        }
+    }
+
+    .social-networks {
+        margin: 20px auto 0px auto;
+        width: 100%;
+        text-align: center;
+        height: 100px;
+
+        #facebook {
+            float: none;
+        }
+        #twitter {
+            float: none;
+        }
+
+    }
+
+    .social {
+        width: 40%;
+        height: 80px;
+        line-height: 80px;
+        float: left;
+    }
+
+    nav {
+        ul {
+            li {
+                padding: 3% 3%;
+                border-bottom: 1px solid #E55424;
+
+                a, span {
+                    font-size: 1.2em;
+
+                    &:hover {
+                        color: #E55424;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .active {
+        display: none;
+    }
+
+
+}
