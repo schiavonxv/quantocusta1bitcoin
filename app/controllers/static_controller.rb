@@ -11,6 +11,25 @@ class StaticController < ApplicationController
   respond_to :json
 
   def home
+    descript = "Saiba a cotação do Bitcoin no Brasil e compre bitcoins com facilidade. Quanto custa um bitcoin? Descubra!"
+    set_meta_tags :description => descript,
+                  :keywords => "bitcoin, btc, brasil, preço, comprar",
+                  :og => {
+                    :title => :title,
+                    :type => "website",
+                    :description => descript,
+                    :url => "http://quantocusta1bitcoin.com.br/",
+                    :locale => "pt_BR",
+                    :image => "" #arrumar aqui depois
+                  },
+                  :twitter => {
+                    :card => "summary",
+                    :site => "@foxbitcoin",
+                    :title => :title,
+                    :description => descript,
+                    :url => "http://quantocusta1bitcoin.com.br/",
+                    :image => "" #arrumar aqui depois
+                  }
   end
 
   def sobre
