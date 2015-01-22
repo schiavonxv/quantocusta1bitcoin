@@ -13,7 +13,7 @@ class Api::ApiController < ActionController::Metal
     respond_to :json
 
     # POST /api/cotacao (params: { amount: x.xx })
-    # Recebe como parâmetro uma quantidade de bitcoins e calcula, de acordo com a orderbook da Foxbit, quanto custa essa quantidade de Bitcoin levando em consideração as ordens de venda de Bitcoin existentes.
+    # Recebe como parâmetro uma quantidade de bitcoins (parâmetro "amount") e calcula, de acordo com a orderbook da Foxbit, quanto custa essa quantidade de Bitcoin levando em consideração as ordens de venda existentes no orderbook.
     def cotacao
 
         # Pegando o número de bitcoins desejados.

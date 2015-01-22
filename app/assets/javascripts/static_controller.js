@@ -2,6 +2,11 @@ $(document).ready(function(){
 
         var message = document.getElementById("message");
 
+        // Redimensiona o input de acordo com o tamanho.
+        function resizeInput() {
+            $(this).attr('size', $(this).val().length);
+        }
+
         // Requisições ao servidor
         var atualizarCotacao = function(){
 
@@ -29,6 +34,9 @@ $(document).ready(function(){
                     message.innerHTML = "Quantidade de bitcoins indisponível, mostrando apenas quantidade disponível."
                     message.className = "";
                 }
+
+                jQuery("#price")[0].resizeInput();
+
             }).fail(function(){
                 message.innerHTML = "Wow, parece que algo de errado aconteceu. Tente novamente mais tarde.";
                 message.className = "";
@@ -46,6 +54,5 @@ $(document).ready(function(){
                 atualizarCotacao();
             }
         });
-
 
     });
