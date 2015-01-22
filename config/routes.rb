@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # namespace :api, defaults: { format: :json }, path: '/api' do
     # namespace :v1 do
       post 'cotacao' => 'static#cotacao'
+      # get 'cotacao' => 'static#cotacao'
     # end
   # end
 
