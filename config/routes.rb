@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   root 'static#home'
-  # get 'static/home'
 
   # API para ser acessada pelo robô
   # namespace :api, defaults: { format: :json }, path: '/api' do
     # namespace :v1 do
-      get 'cotacao' => 'static#cotacao'
+      post 'cotacao' => 'static#cotacao'
     # end
   # end
 

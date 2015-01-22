@@ -16,7 +16,7 @@ class StaticController < ApplicationController
   def cotacao
 
     # Pegando o número de bitcoins desejados.
-    requestedBtcAmount = params[:bitcoins] || 1.0
+    requestedBtcAmount = params[:amount].to_f || 1.0
 
     # Acessando API da Foxbit para pegar orderbook.
     response = HTTParty.get "https://api.blinktrade.com/api/v1/BRL/orderbook?crypto_currency=BTC"
@@ -48,18 +48,15 @@ class StaticController < ApplicationController
         # Soma ao preço final do Bitcoin o valor da ask atual * quantidade de bitcoins oferecidos pela ask atual.
         finalPrice += ask[0] * tempAmount
 
-        # logger.debug("Preço[i]: " + ask[0].to_s + "  Quantidade[i]: " + tempAmount.to_s)
       else
         break
       end
     end
 
+    # Trunca o valor final dos bitcoins para 2 casas decimais (mais legível)
     finalPrice = truncate(finalPrice,2)
 
-    # logger.debug(asks)
-    # logger.debug("Quantidade pedida: " + requestedBtcAmount.to_s)
-    # logger.debug("Quantidade recebida: " + generalBtcAmount.to_s)
-    # logger.debug("Preços somados: " + finalPrice.to_s)
+    # logger.debug()
 
     # Renderizando o valor final na página em formato de JSON
     render json: finalPrice

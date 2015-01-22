@@ -35,7 +35,9 @@ gem 'spring',        group: :development
 
 # Responsável por fazer requisições à API's externas.
 gem 'httparty', '~> 0.13.3'
-# gem 'rest-client', '~> 1.7.2'
+
+# Ajuda na inserção de meta-tags em todas as páginas do site.
+gem 'meta-tags'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

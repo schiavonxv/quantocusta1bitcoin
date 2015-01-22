@@ -52,6 +52,8 @@ GEM
     json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (2.4.3)
     minitest (5.5.1)
     multi_json (1.10.1)
@@ -116,6 +118,7 @@ DEPENDENCIES
   httparty (~> 0.13.3)
   jbuilder (~> 2.0)
   jquery-rails
+  meta-tags
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

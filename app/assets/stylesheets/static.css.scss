@@ -1,3 +1,186 @@
-// Place all the styles related to the Static controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+    top: 0; left: 0; bottom: 0; right: 0; border: 0; margin: 0; padding: 0; position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background-color: #E55424;
+
+    font-family: "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Arial Black", sans-serif;
+    font-weight: 700;
+    font-stretch: normal;
+}
+
+.content {
+
+    position: fixed;
+    right: 0; left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    height: 100%;
+
+    &:before {
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+        background: image-url("background.jpg") no-repeat fixed;
+        background-size: cover;
+        right: 0; left: 0; position: fixed;
+        z-index: -1;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+main {
+    width: 700px;
+    height: 300px;
+    top: 40%;
+
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+
+    color: #fff;
+    text-align: center;
+
+    h1 {
+        box-sizing: border-box;
+        padding: 0.8em 0px 0.3em;
+        font-size: 2.5em;
+        text-transform: uppercase;
+    }
+
+    .buy {
+        padding: 20px 20px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        color: #fff;
+        text-decoration: none;
+        transition: border 0.5s;
+        box-sizing: border-box;
+        display: block;
+        margin: 30px auto 0px auto;
+        max-width: 250px;
+        -moz-max-width: 250px;
+        -webkit-max-width: 200px;
+
+        &:hover{
+            border: 2px solid #E55424;
+            transition: border 0.3s;
+        }
+    }
+
+    .price-outer {
+        width: 500px;
+        height: 60px;
+        line-height: 50px;
+        margin: 0 auto 0 auto;
+        font-size: 30px;
+
+        .input {
+            border: 1px solid #c9c9c9;
+            padding: 0;
+            font-size: 30px;
+            padding: 10px 10px 10px 10px;
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
+
+            border: none;
+            border-bottom: solid 3px #c9c9c9;
+            transition: border 0.3s;
+
+            &:focus {
+                border-bottom: solid 3px #969696;
+            }
+        }
+
+        #btc {
+            min-width: 50px;
+            max-width: 60px;
+            display: inline-block;
+            -moz-appearance: textfield;
+            appearance: none;
+
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+            }
+        }
+
+        #price {
+            min-width: 100px;
+            max-width: 120px;
+            display: inline-block;
+        }
+    }
+
+    &:before{
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        z-index: -1;
+        filter: alpha(opacity=50);
+        -moz-opacity:0.5;
+        opacity: 0.5;
+        border-radius: 1em;
+    }
+}
+
+nav ul {
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+
+    li {
+        padding: 1% 1%;
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-block;
+        margin: 0;
+        color: #FFF;
+        transition: color 0.5s;
+        margin-right: 1em;
+
+        &:last-child{
+            margin-right: 3em;
+        }
+
+        &:hover {
+            transition: color 0.3s;
+            color: #E55424 !important;
+            border-bottom: 1px solid #E55424;
+
+            a {
+                color: #E55424 !important;
+                transition: color 0.3s;
+            }
+        }
+
+        span, a {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            color: #FFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+    }
+
+    .active {
+        border-bottom: 1px solid #E55424;
+    }
+}
+
+.orange-fox{
+    color: #E55424;
+}
+
