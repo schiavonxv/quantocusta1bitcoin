@@ -35,7 +35,7 @@ section {
     &:before {
         -webkit-filter: blur(2px);
         filter: blur(2px);
-        background: image-url("background-desktop.jpg") no-repeat scroll;
+        background: image-url("background1-desktop.jpg") no-repeat scroll;
         background-size: cover;
         right: 0; left: 0; position: absolute;
         z-index: -1;
@@ -65,33 +65,7 @@ section {
 }
 
 .section-3 {
-
-}
-
-.como-comprar-2 {
-    width: 85%;
-    height: 80vh;
-    margin: 0 auto;
-    z-index: 15;
-    position: relative;
-
-    top: 30%;
-    -webkit-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%);
-
-    h2 {
-        font-size: 50px;
-        box-sizing: border-box;
-        margin: 0px 0px 0px 0px;
-        padding: 0px;
-        text-transform: uppercase;
-        color: white;
-        display: inline-block;
-
-        font-weight: 800;
-        font-stretch: normal;
-    }
+    border-top: 10px solid #E55424;
 }
 
 .cotacao-1 {
@@ -203,6 +177,84 @@ section {
     }
 }
 
+.como-comprar-2 {
+    width: 85%;
+    height: 80vh;
+    margin: 0 auto;
+    z-index: 15;
+    position: relative;
+
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%);
+
+    h2 {
+        font-size: 50px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        text-transform: uppercase;
+        color: white;
+        display: inline-block;
+
+        font-weight: 800;
+        font-stretch: normal;
+    }
+}
+
+.sobre-3 {
+
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    background: image-url("texture-about.png");
+    box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+    font-weight: 400;
+    text-align: center;
+
+    img {
+        margin-top: 40px;
+    }
+
+    .inner-content {
+
+        text-align: left;
+        display: inline-block;
+
+        .left {
+            float: left;
+            display: inline-block;
+            width: 45%;
+            margin: 0px 10% 0px 0px;
+        }
+
+        .right {
+            display: inline-block;
+            width: 40%;
+        }
+
+        a {
+            color: #E55424;
+            transition: color 0.5s;
+            text-decoration: none;
+
+            &:hover {
+                color: #000;
+                transition: color 0.3s;
+            }
+        }
+    }
+
+}
+
 nav {
 
     position: absolute;
@@ -263,5 +315,45 @@ nav {
 
 .hidden {
     visibility: hidden;
+}
+
+.same-line {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: 800;
+    display: inline-block;
+    float: left;
+    margin: 0px 10px;
+}
+
+#facebook {
+    background: blue;
+    color: white;
+    transition: background 0.5s;
+
+    &:hover {
+        background: #3f3fff;
+        transition: background 0.3s;
+    }
+}
+
+#twitter {
+    background: #4099FF;
+    color: white;
+    transition: background 0.5s;
+
+    &:hover {
+        background: #6eaef9;
+        transition: background 0.3s;
+    }
 }
 
