@@ -22,7 +22,7 @@ html, body {
     &:before {
         -webkit-filter: blur(2px);
         filter: blur(2px);
-        background: image-url("background.jpg") no-repeat fixed;
+        background: image-url("background-desktop.jpg") no-repeat fixed;
         background-size: cover;
         right: 0; left: 0; position: fixed;
         z-index: -1;
