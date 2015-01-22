@@ -39,6 +39,9 @@ gem 'httparty', '~> 0.13.3'
 # Ajuda na inserção de meta-tags em todas as páginas do site.
 gem 'meta-tags'
 
+# Font-awesome
+gem "font-awesome-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

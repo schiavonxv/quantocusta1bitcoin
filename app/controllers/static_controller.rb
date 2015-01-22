@@ -20,7 +20,7 @@ class StaticController < ApplicationController
                     :description => descript,
                     :url => "http://quantocusta1bitcoin.com.br/",
                     :locale => "pt_BR",
-                    :image => "" #arrumar aqui depois
+                    :image => "http://imgh.us/logo_46.svg"
                   },
                   :twitter => {
                     :card => "summary",
@@ -28,7 +28,7 @@ class StaticController < ApplicationController
                     :title => :title,
                     :description => descript,
                     :url => "http://quantocusta1bitcoin.com.br/",
-                    :image => "" #arrumar aqui depois
+                    :image => "http://imgh.us/logo_46.svg"
                   }
   end
 
