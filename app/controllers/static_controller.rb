@@ -30,7 +30,17 @@ class StaticController < ApplicationController
                     :description => descript,
                     :url => "http://quantocusta1bitcoin.com.br/",
                     :image => "http://imgh.us/logo_46.svg"
-                  }
+                  },
+                  :"DC.Title" => :title,
+                  :"DC.Subject" => ["bitcoin", "btc","brasil","preço","comprar"],
+                  :"DC.Description" => descript,
+                  :"DC.Publisher" => "Foxbit",
+                  :"DC.Contributor" => "Foxbit",
+                  :"DC.Date" => "2015-01",
+                  :"DC.Language" => "pt_BR"
+
+
+
   end
 
 end
