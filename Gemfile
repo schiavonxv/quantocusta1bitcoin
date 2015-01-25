@@ -46,6 +46,9 @@ gem "font-awesome-rails"
 gem 'rails_12factor'
 gem 'responders'
 
+# Servidor para a produção (Heroku)
+gem 'unicorn'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
