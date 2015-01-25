@@ -1,9 +1,14 @@
 # encoding: utf-8
 #
+###
+### Controle que gerencia as páginas estáticas do site.
+###
+#
 # Controle responsável por gerenciar todas as páginas
 # estáticas do site e algumas ações básicas como controle
 # da API.
 #
+##
 class StaticController < ApplicationController
 
   # Gem para fazer requisições à API's
@@ -11,6 +16,7 @@ class StaticController < ApplicationController
   respond_to :json
 
   # Action do controlador que renderiza a página inicial do site.
+  # Basicamente seta meta tags na página inicial para melhorar o SEO.
   def home
     descript = "Saiba a cotação do Bitcoin no Brasil e compre bitcoins com facilidade. Quanto custa um bitcoin? Descubra!"
     set_meta_tags :description => descript,
@@ -38,8 +44,6 @@ class StaticController < ApplicationController
                   :"DC.Contributor" => "Foxbit",
                   :"DC.Date" => "2015-01",
                   :"DC.Language" => "pt_BR"
-
-
 
   end
 
