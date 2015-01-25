@@ -26,7 +26,13 @@ $(document).ready(function(){
             }).done(function(json){
 
                 json = jQuery.parseJSON(json);
-                document.getElementById("price").value = json.price;
+
+                // Se a tela for menor do que 767px, mostra o R$ dentro do input.
+                if ($(window).width() <= 767) {
+                    document.getElementById("price").value = "R$ " + json.price;
+                } else {
+                    document.getElementById("price").value = json.price;
+                }
 
                 // Se BTC's disponíveis < valor pedido
                 if (json.amount < json.requestedAmount) {
@@ -34,6 +40,8 @@ $(document).ready(function(){
                     message.innerHTML = "Quantidade de bitcoins indisponível, mostrando apenas quantidade disponível."
                     message.className = "";
                 }
+
+
 
                 jQuery("#price")[0].resizeInput();
 
