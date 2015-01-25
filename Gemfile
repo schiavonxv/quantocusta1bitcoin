@@ -43,6 +43,8 @@ gem 'meta-tags'
 # Font-awesome
 gem "font-awesome-rails"
 
+gem 'rails_12factor'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
