@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+@media (max-width: 767) and (orientation: portrait) {
 
     main {
         width: 100%;
@@ -7,6 +7,8 @@
     }
 
     .section-1 {
+        //background: image-url("background1-phone.jpg") no-repeat scroll;
+        //background-size: auto;
         float: none;
         height: 550px;
         min-height: 550px;
@@ -14,6 +16,7 @@
         &:before{
             background: image-url("background1-phone.jpg") no-repeat scroll;
             background-size: cover;
+            //background-size: 100%;
             min-height: 550px;
             height: 550px;
             width: 100%;
@@ -25,10 +28,19 @@
     .section-3 {
         z-index: 0;
         width: 100%;
-        height: 1350px;
+        height: 1150px;
+        //height: 190vh;
+        //height: auto;
+        //max-height: 150vh;
+        //height: auto;
+        // min-height: 100vh;
         float: none;
         position: relative;
+        //position: absolute;
+        //bottom: 100%;
+        //left: 0px;
         overflow: hidden;
+        //display: table;
     }
 
     .sobre-3 {
@@ -41,7 +53,18 @@
 
         padding: 0px;
         margin: 0px;
+        //height: auto;
+        //min-height: 100vh;
+        //height: 550px;
+        //max-height: 210vh;
+        //display: block;
+        //position: relative;
+        // overflow: hidden;
+        //clear: both;
+        //float: none;
+        //height: auto;
         box-sizing: border-box;
+        // display: table-row;
 
         .inner-content {
             font-size: 18px;
@@ -69,18 +92,30 @@
 
     .cotacao-1 {
 
+        //min-height: 100% !important;
         width: 100%;
+        //height: 70%;
         height: auto;
+        //max-height: 80%;
         position: absolute;
 
+        //top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        //top: 50%;
+        //left: 0;
+        //-webkit-transform: none;
+        //-ms-transform: none;
+        //transform: none;
 
         #message {
             font-size: 16px;
             font-style: italic;
             font-weight: 300;
+            // position: absolute;
+            //bottom: 100px;
+            //margin: 0px;
             padding: 0px;
             margin: 0px 0px 00px 0px;
             display: none;
@@ -105,23 +140,38 @@
             }
 
             #btc {
+                //display: block;
                 padding: 20px 30px;
                 margin: 0 5px;
             }
 
             #price {
+                //display: inline-block;
+                //float: left;
+                //padding: 0;
                 margin: 0;
+                //display: table-column-group;
+                //box-sizing: border-box;
+                //float: left;
             }
 
             .reais {
+                //display: table-column-group;
+                //display: inline-block;
+                //float: left;
+                //margin: 0px 5px 0px 0px;
+                //float: right;
                 display: none;
             }
 
             .equal-signal {
                 display: none;
+                //display: block;
+                //visibility: hidden;
             }
 
             .orange-fox {
+                //float: left;
                 display: inline-block;
                 clear: both;
             }
@@ -129,7 +179,13 @@
 
         &:before{
             display: none;
+            //transform: none;
+            //top: 0;
         }
+    }
+
+    .break-contact {
+        display: none;
     }
 
     .single-contact {
@@ -144,6 +200,7 @@
 
     .same-line {
         text-align: left;
+        // margin-right: 40px;
         b {
             text-align: left;
         }
@@ -188,6 +245,8 @@
         width: 100%;
         height: 80px;
         line-height: 80px;
+
+        // float: left;
     }
 
     nav {
@@ -208,11 +267,14 @@
             position: absolute !important;
             width: 100% !important;
             height: 550px !important;
+            //transform: translateX(-50%);
             z-index: -1 !important;
             filter: alpha(opacity=50) !important;
             -moz-opacity:0.5 !important;
             opacity: 0.5 !important;
+            //border-radius: 1em;
         }
     }
+
 
 }
