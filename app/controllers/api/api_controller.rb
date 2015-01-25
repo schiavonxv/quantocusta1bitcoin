@@ -45,8 +45,8 @@
 ##
 class Api::ApiController < ActionController::Metal
 
-    include ActionController::MimeResponds
     include AbstractController::Callbacks
+    include ActionController::RespondWith
     include AbstractController::Rendering
     include ActionView::Layouts
     include ActionController::Renderers::All
