@@ -118,7 +118,7 @@ class Api::ApiController < ActionController::Metal
         # Montando o JSON para renderizar na página
         finalJson = {
           :requestedAmount => requestedBtcAmount,
-          :amount => generalBtcAmount,
+          :amount => truncate(generalBtcAmount,2),
           :price => finalPrice
         }.to_json
 

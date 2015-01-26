@@ -3,14 +3,10 @@ $(document).ready(function(){
         var message = document.getElementById("message");
 
         // Redimensiona o input de acordo com o tamanho.
-        function resizeInput() {
-            $(this).attr('size', $(this).val().length);
+        function resize() {
+            $("#btc").autosizeInput();
+            $("#price").autosizeInput();
         }
-
-        // // Mostra mensagem de carregando enquanto AJAX não foi completado.
-        // $(document).ajaxStart(function(){
-        //     message.value = "Perguntando a cotação para a raposa...";
-        // });
 
         // Requisições ao servidor
         var atualizarCotacao = function(){
@@ -20,7 +16,9 @@ $(document).ready(function(){
                 message.innerHTML = "Para calcular o preço, digite a quantidade de bitcoins desejada e pressione \"Enter\".";
                 message.setAttribute("data-count", 1);
             } else {
-                message.className = "hidden";
+                message.className = "";
+                message.innerHTML = "Perguntando a cotação para a raposa... <i class=\"fa fa-cog fa-spin\"></i>";
+                message.setAttribute("data-count", 2);
             }
 
             // Fazendo chamada à API do site
@@ -34,23 +32,35 @@ $(document).ready(function(){
 
                 // Se a tela for menor do que 767px, mostra o R$ dentro do input.
                 if ($(window).width() <= 767) {
-                    document.getElementById("price").value = "R$ " + json.price;
+                    $("#price").val("R$ " + json.price);
                 } else {
-                    document.getElementById("price").value = json.price;
+                    $("#price").val(json.price);
                 }
 
                 // Se BTC's disponíveis < valor pedido
                 if (json.amount < json.requestedAmount) {
-                    document.getElementById("btc").value = json.amount;
+                    document.getElementById("btc").value = parseFloat(json.amount);
                     message.innerHTML = "Quantidade de bitcoins indisponível, mostrando apenas quantidade disponível."
                     message.className = "";
+                } else {
+
+                    // Vendo se precisa desabilitar a mensagem
+                    if(message.getAttribute("data-count") == 1) {
+                        message.className = "";
+                    } else {
+                        message.className = "hidden";
+                    }
+
                 }
 
-                jQuery("#price")[0].resizeInput();
+                $("#price").trigger("keyup");
+                resize();
 
             }).fail(function(){
                 message.innerHTML = "Wow, parece que algo de errado aconteceu. Tente novamente mais tarde.";
                 message.className = "";
+                resize();
+
             });
         }
 
@@ -58,18 +68,12 @@ $(document).ready(function(){
         atualizarCotacao();
 
         // Atualiza cotação ao pressionar Enter ou ao sair do input.
-        // $("#btc").on("blur keyup", function(event){
-        //     isEnter = (event.type === "keyup" && event.keyCode == 13);
-        //     isBlur = (event.type === "blur");
-        //     if(isEnter || isBlur) {
-        //         atualizarCotacao();
-        //     }
-        // });
-
-        $("#btc").on("keyup", function(event){
-            atualizarCotacao();
+        $("#btc").on("blur keyup", function(event){
+            isEnter = (event.type === "keyup" && event.keyCode == 13);
+            isBlur = (event.type === "blur");
+            if(isEnter || isBlur) {
+                atualizarCotacao();
+            }
         });
-
-
 
     });

@@ -142,11 +142,13 @@ section {
         }
 
         #btc {
-            min-width: 50px;
-            max-width: 60px;
+            min-width: 40px;
+            width: 40px;
+            max-width: 100px;
             display: inline-block;
             -moz-appearance: textfield;
             appearance: none;
+            transition: width 0.25s;
 
             &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
                 -webkit-appearance: none;
@@ -154,9 +156,12 @@ section {
         }
 
         #price {
-            width: auto;
-            max-width: 140px;
+            min-width: 80px;
+            width: 80px;
+            max-width: 250px;
             display: inline-block;
+            transition: width 0.25s;
+
         }
     }
 
