@@ -7,6 +7,11 @@ $(document).ready(function(){
             $(this).attr('size', $(this).val().length);
         }
 
+        // // Mostra mensagem de carregando enquanto AJAX não foi completado.
+        // $(document).ajaxStart(function(){
+        //     message.value = "Perguntando a cotação para a raposa...";
+        // });
+
         // Requisições ao servidor
         var atualizarCotacao = function(){
 
@@ -41,8 +46,6 @@ $(document).ready(function(){
                     message.className = "";
                 }
 
-
-
                 jQuery("#price")[0].resizeInput();
 
             }).fail(function(){
@@ -55,12 +58,18 @@ $(document).ready(function(){
         atualizarCotacao();
 
         // Atualiza cotação ao pressionar Enter ou ao sair do input.
-        $("#btc").on("blur keyup", function(event){
-            isEnter = (event.type === "keyup" && event.keyCode == 13);
-            isBlur = (event.type === "blur");
-            if(isEnter || isBlur) {
-                atualizarCotacao();
-            }
+        // $("#btc").on("blur keyup", function(event){
+        //     isEnter = (event.type === "keyup" && event.keyCode == 13);
+        //     isBlur = (event.type === "blur");
+        //     if(isEnter || isBlur) {
+        //         atualizarCotacao();
+        //     }
+        // });
+
+        $("#btc").on("keyup", function(event){
+            atualizarCotacao();
         });
+
+
 
     });

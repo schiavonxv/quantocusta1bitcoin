@@ -1,4 +1,4 @@
-/* @media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
 
     main {
         width: 100%;
@@ -82,7 +82,53 @@
         }
     }
 
+    .social {
+        width: 45%;
+        height: 100px;
+        color: #fff;
+        padding: 10px 5px;
+        text-align: center;
+        font-weight: 800;
+        display: table-cell;
+        vertical-align: middle;
+
+        p {
+            margin: 10px 0px 0px 0px !important;
+            padding: 0px 0px 0px 0px !important;
+        }
+    }
+
+    #facebook {
+        background: blue;
+        color: white;
+        transition: background 0.5s;
+
+        &:hover {
+            background: #3f3fff;
+            transition: background 0.3s;
+        }
+
+    }
+
+    #twitter {
+        background: #4099FF;
+        color: white;
+        transition: background 0.5s;
+
+        &:hover {
+            background: #6eaef9;
+            transition: background 0.3s;
+        }
+    }
+
     .social-networks {
+        height: 100px;
+        display: table;
+        width: 100%;
+        margin: 20px auto 0px auto;
+    }
+
+    /* .social-networks {
         margin: 20px auto 0px auto;
         width: 100%;
         text-align: center;
@@ -102,7 +148,7 @@
         height: 80px;
         line-height: 80px;
         float: left;
-    }
+    } */
 
     nav {
         ul {
@@ -127,4 +173,4 @@
     }
 
 
-} */
+}
