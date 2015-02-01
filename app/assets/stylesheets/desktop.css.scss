@@ -50,8 +50,6 @@ section {
     margin: 0 auto;
     border-top: 10px solid #FFF;
     z-index: 2;
-    min-height: 100%;
-   height: 100%;
 
     &:before {
         background: image-url("background2.jpg") no-repeat scroll;
@@ -145,8 +143,8 @@ section {
         }
 
         #btc {
-            min-width: 40px;
-            width: 40px;
+            min-width: 20px;
+            width: 20px;
             max-width: 120px;
             display: inline-block;
             -moz-appearance: textfield;
@@ -189,9 +187,8 @@ section {
     margin: 0 auto;
     z-index: 15;
     position: relative;
-    translateY(-40%);
 
-    top: 50%;
+    top: 30%;
     -webkit-transform: translateY(-30%);
     -ms-transform: translateY(-30%);
     transform: translateY(-30%);
@@ -213,6 +210,20 @@ section {
 .teste {
     display: table-cell;
     vertical-align: middle;
+}
+
+.section-2 {
+    border-top: 10px solid #E55424;
+
+    margin: 0 auto;
+    min-height: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    display: table;
+    position: absolute;
+    width: 100%;
+
 }
 
 .section-3 {
