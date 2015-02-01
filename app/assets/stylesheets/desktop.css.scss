@@ -46,7 +46,7 @@ section {
 }
 
 
-.section-2 {
+/* .section-2 {
     margin: 0 auto;
     border-top: 10px solid #FFF;
     z-index: 2;
@@ -64,7 +64,20 @@ section {
         height: 100vh;
         min-height: 100%;
     }
-} 
+} */
+
+.section-2 {
+    border-top: 10px solid #E55424;
+
+    margin: 0 auto;
+    min-height: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    display: table;
+    position: absolute;
+    width: 100%;
+
 
 
 

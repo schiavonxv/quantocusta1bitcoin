@@ -12,8 +12,9 @@
     }
 
     .section-2 {
-        background: image-url("background2-tablet.jpg") no-repeat scroll;
-        background-size: auto;
+        z-index: 0;
+        max-height: 150vh;
+        min-height: 100vh;
     }
 
     .section-3 {
