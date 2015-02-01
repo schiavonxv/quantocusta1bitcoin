@@ -61,7 +61,7 @@ class Api::ApiController < ActionController::Metal
     def cotacao
 
         # Pegando o número de bitcoins desejados.
-        requestedBtcAmount = params[:amount] || 1.0
+        requestedBtcAmount = params[:amount] || 1
         requestedBtcAmount = requestedBtcAmount.to_f
 
         # Acessando API da Foxbit para pegar orderbook.
@@ -113,12 +113,12 @@ class Api::ApiController < ActionController::Metal
         end
 
         # Trunca o valor final dos bitcoins para 2 casas decimais (mais legível)
-        finalPrice = truncate(finalPrice,2)
+        finalPrice = truncate(finalPrice,4)
 
         # Montando o JSON para renderizar na página
         finalJson = {
           :requestedAmount => requestedBtcAmount,
-          :amount => truncate(generalBtcAmount,2),
+          :amount => truncate(generalBtcAmount,4),
           :price => finalPrice
         }.to_json
 
