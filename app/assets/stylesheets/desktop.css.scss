@@ -50,6 +50,8 @@ section {
     margin: 0 auto;
     border-top: 10px solid #FFF;
     z-index: 2;
+    min-height: 100%;
+    height: 100%;
 
     &:before {
         background: image-url("background2.jpg") no-repeat scroll;
@@ -187,8 +189,9 @@ section {
     margin: 0 auto;
     z-index: 15;
     position: relative;
+    translateY(-40%);
 
-    top: 30%;
+    top: 50%;
     -webkit-transform: translateY(-30%);
     -ms-transform: translateY(-30%);
     transform: translateY(-30%);
