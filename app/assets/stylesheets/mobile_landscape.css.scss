@@ -22,6 +22,22 @@
         clear: both;
     }
 
+.section-1 {
+        float: none;
+        height: 550px;
+        min-height: 550px;
+
+        &:before{
+            background: image-url("background2-phone.jpg") no-repeat scroll;
+            background-size: cover;
+            min-height: 550px;
+            height: 550px;
+            width: 100%;
+        }
+
+        clear: both;
+    }
+
     .section-3 {
         width: 100%;
     }
