@@ -113,12 +113,12 @@ class Api::ApiController < ActionController::Metal
         end
 
         # Trunca o valor final dos bitcoins para 2 casas decimais (mais legível)
-        finalPrice = truncate(finalPrice,4)
+        finalPrice = truncate(finalPrice,2)
 
         # Montando o JSON para renderizar na página
         finalJson = {
           :requestedAmount => requestedBtcAmount,
-          :amount => truncate(generalBtcAmount,4),
+          :amount => truncate(generalBtcAmount,8),
           :price => finalPrice
         }.to_json
 
