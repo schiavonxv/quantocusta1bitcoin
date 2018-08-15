@@ -22,7 +22,7 @@ class StaticController < ApplicationController
     set_meta_tags :description => descript,
 		  :author => "FoxBit",
    		  :robots => "index, follow",
-		  :Copyright => "Copyright FoxBit Serviços Digitais LTDA 2014. All Rights Reserved.",
+		  :Copyright => "Copyright FoxBit Serviços Digitais SA 2014. All Rights Reserved.",
                   :keywords => "bitcoin, btc, foxbit, comprar bitcoin, calculadora bitcoin, quanto custa bitcoin, quanto vale bitcoin, preço bitcoin, vender bitcoin",
                   :og => {
                     :title => :title,
@@ -34,7 +34,7 @@ class StaticController < ApplicationController
                   },
                   :twitter => {
                     :card => "summary",
-                    :site => "@foxbitcoin",
+                    :site => "@foxbit",
                     :title => "Quanto custa 1 bitcoin? Descubra!",
                     :description => descript,
                     :url => "http://www.quantocusta1bitcoin.com.br",
