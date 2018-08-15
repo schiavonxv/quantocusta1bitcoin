@@ -65,7 +65,7 @@ class Api::ApiController < ActionController::Metal
         requestedBtcAmount = requestedBtcAmount.to_f
 
         # Acessando API da Foxbit para pegar orderbook.
-        response = HTTParty.get "https://api.blinktrade.com/api/v1/BRL/orderbook?crypto_currency=BTC"
+        response = HTTParty.get "https://bitcambio_api.blinktrade.com/api/v1/BRL/orderbook?crypto_currency=BTC"
 
         # Interpretando o JSON
         orderbook = JSON.parse(response.body)
